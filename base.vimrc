@@ -29,10 +29,10 @@ Plugin 'gmarik/Vundle.vim' " Let Vundle manage itself
 Plugin 'scrooloose/nerdtree' " NERDTree, to get a file explorer on the left
 Plugin 'jistr/vim-nerdtree-tabs' " NERDTree tabs, to get a unified NERDTree between tabs
 Plugin 'majutsushi/tagbar' " Tagbar, to look through the tags of a file
-Plugin 'Valloric/YouCompleteMe' " Autocompletion tools
+Plugin 'Valloric/YouCompleteMe' " YouCompleteMe, autocompletion tools
 
 """Programming
-Plugin 'vim-syntastic/syntastic' " Syntax checking
+Plugin 'vim-syntastic/syntastic' " Syntastic, syntax checking
 
 call vundle#end()
 
@@ -73,6 +73,10 @@ let g:nerdtree_tabs_open_on_console_startup=1 " Display the NERDTree browser on 
 
 """ Tagbar
 nmap <F8> :TagbarToggle<CR> " Shortcut: F8 toggles the tagbar
+
+""" YouCompleteMe
+
+let g:ycm_show_diagnostics_ui = 0 " Disable diagnostics for C-family languages, as it would conflict with Syntastic
 
 """ Syntastic
 set statusline+=%#warningmsg#
