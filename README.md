@@ -1,5 +1,7 @@
 # Vim IDE configuration
 
+Do not forget to `git submodule init && git submodule update` first!
+
 ## Installation
 
 ```
